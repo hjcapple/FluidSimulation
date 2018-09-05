@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EE827A6213F7417004A72DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE827A5213F7417004A72DB /* AppDelegate.m */; };
+		2EE827AE213F7418004A72DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EE827AD213F7418004A72DB /* Assets.xcassets */; };
+		2EE827B1213F7418004A72DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EE827AF213F7418004A72DB /* LaunchScreen.storyboard */; };
+		2EE827B4213F7418004A72DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE827B3213F7418004A72DB /* main.m */; };
+		2EE827BB213F76B9004A72DB /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2EE827BA213F76B9004A72DB /* ViewController.mm */; };
+		2EE82841213FB97B004A72DB /* GLPlayground.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82830213FB97B004A72DB /* GLPlayground.cpp */; };
+		2EE82842213FB97B004A72DB /* clearcolor_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82831213FB97B004A72DB /* clearcolor_fsh.glsl */; };
+		2EE82843213FB97B004A72DB /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82834213FB97B004A72DB /* program.cpp */; };
+		2EE82844213FB97B004A72DB /* framebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82836213FB97B004A72DB /* framebuffer.cpp */; };
+		2EE82845213FB97B004A72DB /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82837213FB97B004A72DB /* texture.cpp */; };
+		2EE82846213FB97B004A72DB /* quadrender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82839213FB97B004A72DB /* quadrender.cpp */; };
+		2EE82847213FB97B004A72DB /* logutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8283A213FB97B004A72DB /* logutils.cpp */; };
+		2EE82848213FB97B004A72DB /* passthrough_vsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8283E213FB97B004A72DB /* passthrough_vsh.glsl */; };
+		2EE82849213FB97B004A72DB /* passthrough_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8283F213FB97B004A72DB /* passthrough_fsh.glsl */; };
+		2EE8284C213FB9E5004A72DB /* FluidSimulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8284B213FB9E5004A72DB /* FluidSimulation.cpp */; };
+		2EE8285B213FC1F5004A72DB /* init_velocity_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8284F213FC1F4004A72DB /* init_velocity_fsh.glsl */; };
+		2EE8285C213FC1F5004A72DB /* init_color_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82850213FC1F4004A72DB /* init_color_fsh.glsl */; };
+		2EE8285D213FC1F5004A72DB /* advect_color_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82852213FC1F4004A72DB /* advect_color_fsh.glsl */; };
+		2EE8285E213FC1F5004A72DB /* divergence_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82855213FC1F4004A72DB /* divergence_fsh.glsl */; };
+		2EE8285F213FC1F5004A72DB /* pressure_gradient_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82856213FC1F4004A72DB /* pressure_gradient_fsh.glsl */; };
+		2EE82860213FC1F5004A72DB /* jacobi_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82857213FC1F4004A72DB /* jacobi_fsh.glsl */; };
+		2EE82861213FC1F5004A72DB /* passthrough_uv_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82859213FC1F4004A72DB /* passthrough_uv_fsh.glsl */; };
+		2EE82862213FC1F5004A72DB /* advect_uv_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8285A213FC1F4004A72DB /* advect_uv_fsh.glsl */; };
+		2EE82864213FC47C004A72DB /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82863213FC47C004A72DB /* test.jpeg */; };
+		2EE82869213FCA5E004A72DB /* TKTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82866213FCA5E004A72DB /* TKTimerManager.m */; };
+		2EE8286A213FCA5E004A72DB /* YYGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82868213FCA5E004A72DB /* YYGLTexture.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EE827A1213F7417004A72DB /* FluidSimulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluidSimulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE827A4213F7417004A72DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2EE827A5213F7417004A72DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2EE827A7213F7417004A72DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2EE827AD213F7418004A72DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2EE827B0213F7418004A72DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2EE827B2213F7418004A72DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE827B3213F7418004A72DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EE827BA213F76B9004A72DB /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		2EE82830213FB97B004A72DB /* GLPlayground.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLPlayground.cpp; sourceTree = "<group>"; };
+		2EE82831213FB97B004A72DB /* clearcolor_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clearcolor_fsh.glsl; sourceTree = "<group>"; };
+		2EE82833213FB97B004A72DB /* logutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logutils.h; sourceTree = "<group>"; };
+		2EE82834213FB97B004A72DB /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
+		2EE82835213FB97B004A72DB /* quadrender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quadrender.h; sourceTree = "<group>"; };
+		2EE82836213FB97B004A72DB /* framebuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framebuffer.cpp; sourceTree = "<group>"; };
+		2EE82837213FB97B004A72DB /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		2EE82838213FB97B004A72DB /* framebuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framebuffer.h; sourceTree = "<group>"; };
+		2EE82839213FB97B004A72DB /* quadrender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quadrender.cpp; sourceTree = "<group>"; };
+		2EE8283A213FB97B004A72DB /* logutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logutils.cpp; sourceTree = "<group>"; };
+		2EE8283B213FB97B004A72DB /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		2EE8283C213FB97B004A72DB /* program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = program.h; sourceTree = "<group>"; };
+		2EE8283D213FB97B004A72DB /* gldefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gldefine.h; sourceTree = "<group>"; };
+		2EE8283E213FB97B004A72DB /* passthrough_vsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = passthrough_vsh.glsl; sourceTree = "<group>"; };
+		2EE8283F213FB97B004A72DB /* passthrough_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = passthrough_fsh.glsl; sourceTree = "<group>"; };
+		2EE82840213FB97B004A72DB /* GLPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLPlayground.h; sourceTree = "<group>"; };
+		2EE8284A213FB9E5004A72DB /* FluidSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FluidSimulation.h; sourceTree = "<group>"; };
+		2EE8284B213FB9E5004A72DB /* FluidSimulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FluidSimulation.cpp; sourceTree = "<group>"; };
+		2EE8284F213FC1F4004A72DB /* init_velocity_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init_velocity_fsh.glsl; sourceTree = "<group>"; };
+		2EE82850213FC1F4004A72DB /* init_color_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init_color_fsh.glsl; sourceTree = "<group>"; };
+		2EE82852213FC1F4004A72DB /* advect_color_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = advect_color_fsh.glsl; sourceTree = "<group>"; };
+		2EE82853213FC1F4004A72DB /* shaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shaders.h; sourceTree = "<group>"; };
+		2EE82855213FC1F4004A72DB /* divergence_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = divergence_fsh.glsl; sourceTree = "<group>"; };
+		2EE82856213FC1F4004A72DB /* pressure_gradient_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pressure_gradient_fsh.glsl; sourceTree = "<group>"; };
+		2EE82857213FC1F4004A72DB /* jacobi_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jacobi_fsh.glsl; sourceTree = "<group>"; };
+		2EE82859213FC1F4004A72DB /* passthrough_uv_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = passthrough_uv_fsh.glsl; sourceTree = "<group>"; };
+		2EE8285A213FC1F4004A72DB /* advect_uv_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = advect_uv_fsh.glsl; sourceTree = "<group>"; };
+		2EE82863213FC47C004A72DB /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
+		2EE82865213FCA5D004A72DB /* YYGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGLTexture.h; sourceTree = "<group>"; };
+		2EE82866213FCA5E004A72DB /* TKTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTimerManager.m; sourceTree = "<group>"; };
+		2EE82867213FCA5E004A72DB /* TKTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTimerManager.h; sourceTree = "<group>"; };
+		2EE82868213FCA5E004A72DB /* YYGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGLTexture.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2EE8279E213F7417004A72DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EE82798213F7417004A72DB = {
+			isa = PBXGroup;
+			children = (
+				2EE827A3213F7417004A72DB /* FluidSimulation */,
+				2EE827A2213F7417004A72DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2EE827A2213F7417004A72DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2EE827A1213F7417004A72DB /* FluidSimulation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2EE827A3213F7417004A72DB /* FluidSimulation */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8282F213FB97B004A72DB /* gl */,
+				2EE82819213FB973004A72DB /* fluid */,
+				2EE827A4213F7417004A72DB /* AppDelegate.h */,
+				2EE827A5213F7417004A72DB /* AppDelegate.m */,
+				2EE827A7213F7417004A72DB /* ViewController.h */,
+				2EE827BA213F76B9004A72DB /* ViewController.mm */,
+				2EE82867213FCA5E004A72DB /* TKTimerManager.h */,
+				2EE82866213FCA5E004A72DB /* TKTimerManager.m */,
+				2EE82865213FCA5D004A72DB /* YYGLTexture.h */,
+				2EE82868213FCA5E004A72DB /* YYGLTexture.m */,
+				2EE82863213FC47C004A72DB /* test.jpeg */,
+				2EE827AD213F7418004A72DB /* Assets.xcassets */,
+				2EE827AF213F7418004A72DB /* LaunchScreen.storyboard */,
+				2EE827B2213F7418004A72DB /* Info.plist */,
+				2EE827B3213F7418004A72DB /* main.m */,
+			);
+			path = FluidSimulation;
+			sourceTree = "<group>";
+		};
+		2EE82819213FB973004A72DB /* fluid */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8284D213FC1F4004A72DB /* shaders */,
+				2EE8284B213FB9E5004A72DB /* FluidSimulation.cpp */,
+				2EE8284A213FB9E5004A72DB /* FluidSimulation.h */,
+			);
+			path = fluid;
+			sourceTree = SOURCE_ROOT;
+		};
+		2EE8282F213FB97B004A72DB /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				2EE82840213FB97B004A72DB /* GLPlayground.h */,
+				2EE82830213FB97B004A72DB /* GLPlayground.cpp */,
+				2EE82832213FB97B004A72DB /* glutils */,
+				2EE8283E213FB97B004A72DB /* passthrough_vsh.glsl */,
+				2EE8283F213FB97B004A72DB /* passthrough_fsh.glsl */,
+				2EE82831213FB97B004A72DB /* clearcolor_fsh.glsl */,
+			);
+			path = gl;
+			sourceTree = SOURCE_ROOT;
+		};
+		2EE82832213FB97B004A72DB /* glutils */ = {
+			isa = PBXGroup;
+			children = (
+				2EE82833213FB97B004A72DB /* logutils.h */,
+				2EE82834213FB97B004A72DB /* program.cpp */,
+				2EE82835213FB97B004A72DB /* quadrender.h */,
+				2EE82836213FB97B004A72DB /* framebuffer.cpp */,
+				2EE82837213FB97B004A72DB /* texture.cpp */,
+				2EE82838213FB97B004A72DB /* framebuffer.h */,
+				2EE82839213FB97B004A72DB /* quadrender.cpp */,
+				2EE8283A213FB97B004A72DB /* logutils.cpp */,
+				2EE8283B213FB97B004A72DB /* texture.h */,
+				2EE8283C213FB97B004A72DB /* program.h */,
+				2EE8283D213FB97B004A72DB /* gldefine.h */,
+			);
+			path = glutils;
+			sourceTree = "<group>";
+		};
+		2EE8284D213FC1F4004A72DB /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8284E213FC1F4004A72DB /* init */,
+				2EE82851213FC1F4004A72DB /* color */,
+				2EE82853213FC1F4004A72DB /* shaders.h */,
+				2EE82854213FC1F4004A72DB /* velocity */,
+				2EE82858213FC1F4004A72DB /* uv */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
+		2EE8284E213FC1F4004A72DB /* init */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8284F213FC1F4004A72DB /* init_velocity_fsh.glsl */,
+				2EE82850213FC1F4004A72DB /* init_color_fsh.glsl */,
+			);
+			path = init;
+			sourceTree = "<group>";
+		};
+		2EE82851213FC1F4004A72DB /* color */ = {
+			isa = PBXGroup;
+			children = (
+				2EE82852213FC1F4004A72DB /* advect_color_fsh.glsl */,
+			);
+			path = color;
+			sourceTree = "<group>";
+		};
+		2EE82854213FC1F4004A72DB /* velocity */ = {
+			isa = PBXGroup;
+			children = (
+				2EE82855213FC1F4004A72DB /* divergence_fsh.glsl */,
+				2EE82856213FC1F4004A72DB /* pressure_gradient_fsh.glsl */,
+				2EE82857213FC1F4004A72DB /* jacobi_fsh.glsl */,
+			);
+			path = velocity;
+			sourceTree = "<group>";
+		};
+		2EE82858213FC1F4004A72DB /* uv */ = {
+			isa = PBXGroup;
+			children = (
+				2EE82859213FC1F4004A72DB /* passthrough_uv_fsh.glsl */,
+				2EE8285A213FC1F4004A72DB /* advect_uv_fsh.glsl */,
+			);
+			path = uv;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2EE827A0213F7417004A72DB /* FluidSimulation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE827B7213F7418004A72DB /* Build configuration list for PBXNativeTarget "FluidSimulation" */;
+			buildPhases = (
+				2EE8279D213F7417004A72DB /* Sources */,
+				2EE8279E213F7417004A72DB /* Frameworks */,
+				2EE8279F213F7417004A72DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FluidSimulation;
+			productName = FluidSimulation;
+			productReference = 2EE827A1213F7417004A72DB /* FluidSimulation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2EE82799213F7417004A72DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = HJC;
+				TargetAttributes = {
+					2EE827A0213F7417004A72DB = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2EE8279C213F7417004A72DB /* Build configuration list for PBXProject "FluidSimulation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2EE82798213F7417004A72DB;
+			productRefGroup = 2EE827A2213F7417004A72DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2EE827A0213F7417004A72DB /* FluidSimulation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2EE8279F213F7417004A72DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE8285B213FC1F5004A72DB /* init_velocity_fsh.glsl in Resources */,
+				2EE8285E213FC1F5004A72DB /* divergence_fsh.glsl in Resources */,
+				2EE8285D213FC1F5004A72DB /* advect_color_fsh.glsl in Resources */,
+				2EE827B1213F7418004A72DB /* LaunchScreen.storyboard in Resources */,
+				2EE827AE213F7418004A72DB /* Assets.xcassets in Resources */,
+				2EE82842213FB97B004A72DB /* clearcolor_fsh.glsl in Resources */,
+				2EE82862213FC1F5004A72DB /* advect_uv_fsh.glsl in Resources */,
+				2EE82864213FC47C004A72DB /* test.jpeg in Resources */,
+				2EE82861213FC1F5004A72DB /* passthrough_uv_fsh.glsl in Resources */,
+				2EE82860213FC1F5004A72DB /* jacobi_fsh.glsl in Resources */,
+				2EE8285F213FC1F5004A72DB /* pressure_gradient_fsh.glsl in Resources */,
+				2EE8285C213FC1F5004A72DB /* init_color_fsh.glsl in Resources */,
+				2EE82848213FB97B004A72DB /* passthrough_vsh.glsl in Resources */,
+				2EE82849213FB97B004A72DB /* passthrough_fsh.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2EE8279D213F7417004A72DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE82847213FB97B004A72DB /* logutils.cpp in Sources */,
+				2EE82846213FB97B004A72DB /* quadrender.cpp in Sources */,
+				2EE82869213FCA5E004A72DB /* TKTimerManager.m in Sources */,
+				2EE827B4213F7418004A72DB /* main.m in Sources */,
+				2EE827A6213F7417004A72DB /* AppDelegate.m in Sources */,
+				2EE82841213FB97B004A72DB /* GLPlayground.cpp in Sources */,
+				2EE82844213FB97B004A72DB /* framebuffer.cpp in Sources */,
+				2EE82843213FB97B004A72DB /* program.cpp in Sources */,
+				2EE8284C213FB9E5004A72DB /* FluidSimulation.cpp in Sources */,
+				2EE827BB213F76B9004A72DB /* ViewController.mm in Sources */,
+				2EE8286A213FCA5E004A72DB /* YYGLTexture.m in Sources */,
+				2EE82845213FB97B004A72DB /* texture.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2EE827AF213F7418004A72DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EE827B0213F7418004A72DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2EE827B5213F7418004A72DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2EE827B6213F7418004A72DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2EE827B8213F7418004A72DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P78A4DSR5R;
+				INFOPLIST_FILE = FluidSimulation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dumbduck.FluidSimulation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2EE827B9213F7418004A72DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P78A4DSR5R;
+				INFOPLIST_FILE = FluidSimulation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dumbduck.FluidSimulation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EE8279C213F7417004A72DB /* Build configuration list for PBXProject "FluidSimulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE827B5213F7418004A72DB /* Debug */,
+				2EE827B6213F7418004A72DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EE827B7213F7418004A72DB /* Build configuration list for PBXNativeTarget "FluidSimulation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE827B8213F7418004A72DB /* Debug */,
+				2EE827B9213F7418004A72DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2EE82799213F7417004A72DB /* Project object */;
+}
