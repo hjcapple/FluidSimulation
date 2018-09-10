@@ -32,7 +32,7 @@
 		2EE82862213FC1F5004A72DB /* advect_uv_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 2EE8285A213FC1F4004A72DB /* advect_uv_fsh.glsl */; };
 		2EE82864213FC47C004A72DB /* test.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2EE82863213FC47C004A72DB /* test.jpeg */; };
 		2EE82869213FCA5E004A72DB /* TKTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82866213FCA5E004A72DB /* TKTimerManager.m */; };
-		2EE8286A213FCA5E004A72DB /* YYGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82868213FCA5E004A72DB /* YYGLTexture.m */; };
+		2EE8286A213FCA5E004A72DB /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE82868213FCA5E004A72DB /* GLTexture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,10 +73,10 @@
 		2EE82859213FC1F4004A72DB /* passthrough_uv_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = passthrough_uv_fsh.glsl; sourceTree = "<group>"; };
 		2EE8285A213FC1F4004A72DB /* advect_uv_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = advect_uv_fsh.glsl; sourceTree = "<group>"; };
 		2EE82863213FC47C004A72DB /* test.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpeg; sourceTree = "<group>"; };
-		2EE82865213FCA5D004A72DB /* YYGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYGLTexture.h; sourceTree = "<group>"; };
+		2EE82865213FCA5D004A72DB /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTexture.h; sourceTree = "<group>"; };
 		2EE82866213FCA5E004A72DB /* TKTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTimerManager.m; sourceTree = "<group>"; };
 		2EE82867213FCA5E004A72DB /* TKTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTimerManager.h; sourceTree = "<group>"; };
-		2EE82868213FCA5E004A72DB /* YYGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYGLTexture.m; sourceTree = "<group>"; };
+		2EE82868213FCA5E004A72DB /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +117,8 @@
 				2EE827BA213F76B9004A72DB /* ViewController.mm */,
 				2EE82867213FCA5E004A72DB /* TKTimerManager.h */,
 				2EE82866213FCA5E004A72DB /* TKTimerManager.m */,
-				2EE82865213FCA5D004A72DB /* YYGLTexture.h */,
-				2EE82868213FCA5E004A72DB /* YYGLTexture.m */,
+				2EE82865213FCA5D004A72DB /* GLTexture.h */,
+				2EE82868213FCA5E004A72DB /* GLTexture.m */,
 				2EE82863213FC47C004A72DB /* test.jpeg */,
 				2EE827AD213F7418004A72DB /* Assets.xcassets */,
 				2EE827AF213F7418004A72DB /* LaunchScreen.storyboard */,
@@ -308,7 +308,7 @@
 				2EE82843213FB97B004A72DB /* program.cpp in Sources */,
 				2EE8284C213FB9E5004A72DB /* FluidSimulation.cpp in Sources */,
 				2EE827BB213F76B9004A72DB /* ViewController.mm in Sources */,
-				2EE8286A213FCA5E004A72DB /* YYGLTexture.m in Sources */,
+				2EE8286A213FCA5E004A72DB /* GLTexture.m in Sources */,
 				2EE82845213FB97B004A72DB /* texture.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

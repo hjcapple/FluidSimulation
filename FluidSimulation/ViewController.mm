@@ -1,10 +1,10 @@
 #import "ViewController.h"
 #import "TKTimerManager.h"
-#import "YYGLTexture.h"
+#import "GLTexture.h"
 #import "FluidSimulation.h"
 #import <vector>
 
-static glutils::TextureInfo toFlowImageTexture(YYGLTexture *texture) {
+static glutils::TextureInfo toFlowImageTexture(GLTexture *texture) {
     glutils::TextureInfo inTex;
     inTex.textureID = texture.textureID;
     inTex.width = texture.width;
@@ -21,8 +21,8 @@ static glutils::TextureInfo toFlowImageTexture(YYGLTexture *texture) {
     CGFloat _screenWidth;
     CGFloat _screenHeight;
 
-    YYGLTexture *_inputTexture;
-    YYGLTexture *_outputTexture;
+    GLTexture *_inputTexture;
+    GLTexture *_outputTexture;
     glutils::FluidSimulation *_fluidSimulation;
 }
 
@@ -75,13 +75,13 @@ static glutils::TextureInfo toFlowImageTexture(YYGLTexture *texture) {
     [EAGLContext setCurrentContext:_context];
     glClearColor(0.0, 0.0, 0.0, 1.0);
 
-    _inputTexture = [[YYGLTexture alloc] initWithTarget:GL_TEXTURE_2D];
-    _outputTexture = [[YYGLTexture alloc] initWithTarget:GL_TEXTURE_2D];
-    [_inputTexture createFromImage:[UIImage imageNamed:@"test.jpeg"]];
-    [_outputTexture createWithWidth:_inputTexture.width AndHeight:_inputTexture.height AndFormat:GL_RGBA];
+    _inputTexture = [[GLTexture alloc] initWithTarget:GL_TEXTURE_2D];
+    _outputTexture = [[GLTexture alloc] initWithTarget:GL_TEXTURE_2D];
+    [_inputTexture createWithImage:[UIImage imageNamed:@"test.jpeg"]];
+    [_outputTexture createWithWidth:_inputTexture.width height:_inputTexture.height format:GL_RGBA];
 }
 
-static CGRect computeViewport(CGRect rect, YYGLTexture *texture) {
+static CGRect computeViewport(CGRect rect, GLTexture *texture) {
     CGRect viewport = rect;
     CGFloat sx = rect.size.width / (CGFloat)texture.width;
     CGFloat sy = rect.size.height / (CGFloat)texture.height;

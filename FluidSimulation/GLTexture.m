@@ -1,18 +1,13 @@
-#import "YYGLTexture.h"
+#import "GLTexture.h"
 #import <UIKit/UIKit.h>
 
-@interface YYGLTexture () {
-    BOOL _isRef;
-}
-@end
-
-@implementation YYGLTexture
+@implementation GLTexture
 
 - (id)initWithTarget:(int)target {
-    if (!(self = [super init]))
+    if (!(self = [super init])) {
         return nil;
+    }
 
-    _isRef = false;
     _target = target;
     GLuint textureHandles[1] = {0};
     glGenTextures(1, textureHandles);
@@ -27,27 +22,17 @@
 }
 
 - (void)dealloc {
-    [self tearDown];
-}
-
-- (void)tearDown {
-    if (!_isRef) {
-        if (_textureID) {
-            glDeleteTextures(1, &_textureID);
-            _textureID = 0;
-        }
+    if (_textureID) {
+        glDeleteTextures(1, &_textureID);
+        _textureID = 0;
     }
 }
 
-- (void)createWithWidth:(int)width AndHeight:(int)height AndFormat:(int)format {
-    glBindTexture(_target, _textureID);
-    glTexImage2D(_target, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, nil);
-    _width = width;
-    _height = height;
-    _format = format;
+- (void)createWithWidth:(int)width height:(int)height format:(int)format {
+    [self createWithWidth:width height:height format:format data:nil];
 }
 
-- (void)createWithWidth:(int)width AndHeight:(int)height AndFormat:(int)format AndData:(void *)data {
+- (void)createWithWidth:(int)width height:(int)height format:(int)format data:(void *)data {
     glBindTexture(_target, _textureID);
     glTexImage2D(_target, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
     _width = width;
@@ -55,7 +40,7 @@
     _format = format;
 }
 
-- (void)createFromImage:(UIImage *)image {
+- (void)createWithImage:(UIImage *)image {
     _width = (int)CGImageGetWidth(image.CGImage);
     _height = (int)CGImageGetHeight(image.CGImage);
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
@@ -70,7 +55,6 @@
                                                  kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
     CGContextClearRect(context, CGRectMake(0, 0, _width, _height));
-    CGContextTranslateCTM(context, 0, _height - _height);
     CGContextDrawImage(context, CGRectMake(0, 0, _width, _height), image.CGImage);
 
     glBindTexture(_target, _textureID);
